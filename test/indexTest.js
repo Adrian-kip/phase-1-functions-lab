@@ -62,3 +62,49 @@ describe('index.js', function() {
     });
   });
 });
+/* 
+// index.js
+
+// Function to calculate distance from HQ in blocks
+function distanceFromHqInBlocks(someValue) {
+  const hq = 42; // Assuming HQ is on 42nd street
+  return Math.abs(someValue - hq);
+}
+
+// Function to calculate distance from HQ in feet
+function distanceFromHqInFeet(someValue) {
+  const blocks = distanceFromHqInBlocks(someValue);
+  const feetPerBlock = 264; // Each block is 264 feet
+  return blocks * feetPerBlock;
+}
+
+// Function to calculate distance traveled in feet
+function distanceTravelledInFeet(start, destination) {
+  const blocksTravelled = Math.abs(destination - start);
+  const feetPerBlock = 264;
+  return blocksTravelled * feetPerBlock;
+}
+
+// Function to calculate fare price based on distance traveled
+function calculatesFarePrice(start, destination) {
+  const distanceInFeet = distanceTravelledInFeet(start, destination);
+
+  if (distanceInFeet <= 400) {
+    return 0; // First 400 feet are free
+  } else if (distanceInFeet > 400 && distanceInFeet <= 2000) {
+    return (distanceInFeet - 400) * 0.02; // 2 cents per foot
+  } else if (distanceInFeet > 2000 && distanceInFeet <= 2500) {
+    return 25; // Flat fare of $25 for distances between 2000 and 2500 feet
+  } else {
+    return 'cannot travel that far'; // No rides over 2500 feet
+  }
+}
+
+// Export the functions to make them available for tests
+module.exports = {
+  distanceFromHqInBlocks,
+  distanceFromHqInFeet,
+  distanceTravelledInFeet,
+  calculatesFarePrice,
+};
+*/
